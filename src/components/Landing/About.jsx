@@ -4,8 +4,9 @@ import { motion } from 'framer-motion';
 
 const About = ({ data }) => {
   const { i18n, t } = useTranslation();
-  const lang = i18n.language.charAt(0).toUpperCase() + i18n.language.slice(1);
-  const content = data[`content${lang}`];
+  const currentLang = (i18n.resolvedLanguage || i18n.language || 'en').split('-')[0];
+  const lang = currentLang.charAt(0).toUpperCase() + currentLang.slice(1);
+  const content = data[`content${lang}`] || data.contentEn;
 
   return (
     <section id="about" className="pb-20 pt-10 bg-muted/30">

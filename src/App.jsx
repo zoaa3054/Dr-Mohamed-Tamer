@@ -18,11 +18,12 @@ const RootLayout = () => {
   const { i18n } = useTranslation();
 
   useEffect(() => {
-    const dir = i18n.language === 'ar' ? 'rtl' : 'ltr';
+    const currentLang = (i18n.resolvedLanguage || i18n.language || 'en').split('-')[0];
+    const dir = currentLang === 'ar' ? 'rtl' : 'ltr';
     document.documentElement.dir = dir;
-    document.documentElement.lang = i18n.language;
+    document.documentElement.lang = currentLang;
     document.body.className = dir;
-  }, [i18n.language]);
+  }, [i18n.language, i18n.resolvedLanguage]);
 
   return <Outlet />;
 };

@@ -20,7 +20,8 @@ const LandingPage = ({ previewData = null }) => {
 
   if ((loading && !previewData) || !data) return <div className="flex items-center justify-center min-h-screen bg-background"><Loader2 className="animate-spin text-primary" /></div>;
 
-  const currentLang = i18n.language.charAt(0).toUpperCase() + i18n.language.slice(1);
+  const langBase = (i18n.resolvedLanguage || i18n.language || 'en').split('-')[0];
+  const currentLang = langBase.charAt(0).toUpperCase() + langBase.slice(1);
   const title = data.hero[`title${currentLang}`] || t('common.doctor_name');
   const description = data.hero[`subtitle${currentLang}`] || t('common.physiotherapist');
 

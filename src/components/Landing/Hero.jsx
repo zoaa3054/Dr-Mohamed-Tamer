@@ -7,10 +7,11 @@ import { BackgroundBeams } from '../ui/background-beams';
 
 const Hero = ({ data, socials }) => {
   const { i18n } = useTranslation();
-  const lang = i18n.language.charAt(0).toUpperCase() + i18n.language.slice(1);
+  const currentLang = (i18n.resolvedLanguage || i18n.language || 'en').split('-')[0];
+  const lang = currentLang.charAt(0).toUpperCase() + currentLang.slice(1);
 
-  const title = data[`title${lang}`];
-  const subtitle = data[`subtitle${lang}`];
+  const title = data[`title${lang}`] || data.titleEn;
+  const subtitle = data[`subtitle${lang}`] || data.subtitleEn;
 
   return (
     <section id="hero" className="relative min-h-screen pt-32 pb-0 overflow-hidden bg-slate-50 dark:bg-slate-950 flex flex-col justify-end">
