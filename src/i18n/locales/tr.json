@@ -1,0 +1,22 @@
+{
+  "common": {
+    "doctor_name": "Dr. Mohamed Tamer",
+    "physiotherapist": "Fizyoterapist",
+    "about": "Hakkında",
+    "certificates": "Sertifikalar",
+    "accomplishments": "Başarılar",
+    "contact": "İletişim",
+    "send_email": "E-posta Gönder",
+    "admin_login": "Yönetici Girişi",
+    "password": "Şifre",
+    "login": "Giriş",
+    "save": "Kaydet",
+    "cancel": "İptal",
+    "edit": "Düzenle",
+    "logout": "Çıkış Yap",
+    "home": "Anasayfa",
+    "hero_title": "Daha İyi Bir Yaşam İçin Modern Fizyoterapi",
+    "hero_subtitle": "Uzman bakımı ve kişiselleştirilmiş tedavilerle iyileşmenize, daha iyi hareket etmenize ve ağrısız yaşamanize yardımcı oluyoruz.",
+    "footer_text": "© 2026 Dr. Mohamed Tamer. Tüm hakları saklıdır."
+  }
+}
