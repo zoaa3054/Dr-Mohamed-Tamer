@@ -60,7 +60,7 @@ const router = createBrowserRouter([
 function App() {
   return (
     <HelmetProvider>
-      <ThemeProvider attribute="class" defaultTheme="light">
+      <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
         <AuthProvider>
           <RouterProvider router={router} />
         </AuthProvider>
